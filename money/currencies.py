@@ -27,15 +27,25 @@ class Money(metaclass=ABCMeta):
         pass
 
 class Dollar(Money):
+
+    def __init__(self, amount):
+        self._amount = amount
+        self._currency = "USD"
+
     def times(self, multiplier):
         return Dollar(self._amount * multiplier)
 
     def currency(self):
-        return "USD"
+        return self._currency
 
 class Franc(Money):
+
+    def __init__(self, amount):
+        self._amount = amount
+        self._currency = "CHF"
+
     def times(self, multiplier):
         return Franc(self._amount * multiplier)
 
     def currency(self):
-        return "CHF"
+        return self._currency
