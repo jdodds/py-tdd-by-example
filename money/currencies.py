@@ -16,7 +16,7 @@ class Money(metaclass=ABCMeta):
 
     @staticmethod
     def franc(amount):
-        return Franc(amount)
+        return Franc(amount, None)
 
     @abstractmethod
     def times(self, multiplier):
@@ -41,4 +41,4 @@ class Franc(Money):
         self._currency = "CHF"
 
     def times(self, multiplier):
-        return Franc(self._amount * multiplier)
+        return Franc(self._amount * multiplier, None)
