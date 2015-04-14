@@ -22,9 +22,8 @@ class Money(metaclass=ABCMeta):
     def times(self, multiplier):
         pass
 
-    @abstractmethod
     def currency(self):
-        pass
+        return self._currency
 
 class Dollar(Money):
 
@@ -35,9 +34,6 @@ class Dollar(Money):
     def times(self, multiplier):
         return Dollar(self._amount * multiplier)
 
-    def currency(self):
-        return self._currency
-
 class Franc(Money):
 
     def __init__(self, amount):
@@ -46,6 +42,3 @@ class Franc(Money):
 
     def times(self, multiplier):
         return Franc(self._amount * multiplier)
-
-    def currency(self):
-        return self._currency
