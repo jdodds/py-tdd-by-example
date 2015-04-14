@@ -14,6 +14,7 @@ class DollarsTest(TestCase):
 
     def testEquality(self):
         self.assertEqual(Dollar(5), Dollar(5))
+        self.assertNotEqual(Dollar(5), Dollar(6))
 
 
 if __name__ == '__main__':
