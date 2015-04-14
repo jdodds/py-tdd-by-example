@@ -10,8 +10,5 @@ class Dollar(Money):
         return Dollar(self._amount * multiplier)
 
 class Franc(Money):
-    def __eq__(self, other):
-        return self._amount == other._amount
-
     def times(self, multiplier):
         return Franc(self._amount * multiplier)
