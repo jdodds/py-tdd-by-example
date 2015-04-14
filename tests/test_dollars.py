@@ -8,9 +8,9 @@ class DollarsTest(TestCase):
     def testMultiplication(self):
         five = Dollar(5)
         product = five.times(2)
-        self.assertEqual(10, product.amount)
+        self.assertEqual(Dollar(10), product)
         product = five.times(3)
-        self.assertEqual(15, product.amount)
+        self.assertEqual(Dollar(15), product)
 
     def testEquality(self):
         self.assertEqual(Dollar(5), Dollar(5))
