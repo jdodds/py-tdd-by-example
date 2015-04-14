@@ -1,11 +1,8 @@
 class Money():
-    pass
-
-class Dollar(Money):
-
     def __init__(self, amount):
         self._amount = amount
 
+class Dollar(Money):
     def __eq__(self, other):
         return self._amount == other._amount
 
