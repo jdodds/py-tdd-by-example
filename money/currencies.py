@@ -12,7 +12,7 @@ class Money(metaclass=ABCMeta):
 
     @staticmethod
     def dollar(amount):
-        return Dollar(amount)
+        return Dollar(amount, 'USD')
 
     @staticmethod
     def franc(amount):
@@ -27,12 +27,12 @@ class Money(metaclass=ABCMeta):
 
 class Dollar(Money):
 
-    def __init__(self, amount):
+    def __init__(self, amount, currency):
         self._amount = amount
-        self._currency = "USD"
+        self._currency = currency
 
     def times(self, multiplier):
-        return Dollar(self._amount * multiplier)
+        return Money.dollar(self._amount * multiplier)
 
 class Franc(Money):
 
