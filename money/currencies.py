@@ -1,8 +1,9 @@
 from abc import ABCMeta, abstractmethod
 
 class Money(metaclass=ABCMeta):
-    def __init__(self, amount):
+    def __init__(self, amount, currency):
         self._amount = amount
+        self._currency = currency
 
     def __eq__(self, other):
         return (
@@ -26,19 +27,9 @@ class Money(metaclass=ABCMeta):
         return self._currency
 
 class Dollar(Money):
-
-    def __init__(self, amount, currency):
-        self._amount = amount
-        self._currency = currency
-
     def times(self, multiplier):
         return Money.dollar(self._amount * multiplier)
 
 class Franc(Money):
-
-    def __init__(self, amount, currency):
-        self._amount = amount
-        self._currency = "CHF"
-
     def times(self, multiplier):
         return Money.franc(self._amount * multiplier)
