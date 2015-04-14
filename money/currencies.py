@@ -22,10 +22,20 @@ class Money(metaclass=ABCMeta):
     def times(self, multiplier):
         pass
 
+    @abstractmethod
+    def currency(self):
+        pass
+
 class Dollar(Money):
     def times(self, multiplier):
         return Dollar(self._amount * multiplier)
 
+    def currency(self):
+        return "USD"
+
 class Franc(Money):
     def times(self, multiplier):
         return Franc(self._amount * multiplier)
+
+    def currency(self):
+        return "CHF"
