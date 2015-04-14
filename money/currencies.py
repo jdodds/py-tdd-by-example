@@ -36,7 +36,7 @@ class Dollar(Money):
 
 class Franc(Money):
 
-    def __init__(self, amount):
+    def __init__(self, amount, currency):
         self._amount = amount
         self._currency = "CHF"
 
