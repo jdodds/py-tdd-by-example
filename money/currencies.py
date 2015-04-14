@@ -8,6 +8,10 @@ class Money():
             self._amount == other._amount
         )
 
+    @staticmethod
+    def dollar(amount):
+        return Dollar(amount)
+
 class Dollar(Money):
     def times(self, multiplier):
         return Dollar(self._amount * multiplier)
