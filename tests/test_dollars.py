@@ -7,10 +7,8 @@ from money.dollar import Dollar
 class DollarsTest(TestCase):
     def testMultiplication(self):
         five = Dollar(5)
-        product = five.times(2)
-        self.assertEqual(Dollar(10), product)
-        product = five.times(3)
-        self.assertEqual(Dollar(15), product)
+        self.assertEqual(Dollar(10), five.times(2))
+        self.assertEqual(Dollar(15), five.times(3))
 
     def testEquality(self):
         self.assertEqual(Dollar(5), Dollar(5))
