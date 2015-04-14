@@ -12,6 +12,10 @@ class Money():
     def dollar(amount):
         return Dollar(amount)
 
+    @staticmethod
+    def franc(amount):
+        return Franc(amount)
+
 class Dollar(Money):
     def times(self, multiplier):
         return Dollar(self._amount * multiplier)
