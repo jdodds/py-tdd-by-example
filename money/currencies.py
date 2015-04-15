@@ -28,8 +28,8 @@ class Money(metaclass=ABCMeta):
 
 class Dollar(Money):
     def times(self, multiplier):
-        return Dollar(self._amount * multiplier, 'USD')
+        return Dollar(self._amount * multiplier, self._currency)
 
 class Franc(Money):
     def times(self, multiplier):
-        return Franc(self._amount * multiplier, 'CHF')
+        return Franc(self._amount * multiplier, self._currency)
