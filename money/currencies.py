@@ -31,7 +31,7 @@ class Money():
 
 class Dollar(Money):
     def times(self, multiplier):
-        return Dollar(self._amount * multiplier, self._currency)
+        return Money(self._amount * multiplier, self._currency)
 
 class Franc(Money):
     def times(self, multiplier):
