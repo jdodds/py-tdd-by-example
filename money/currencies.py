@@ -11,6 +11,9 @@ class Money():
             self._amount == other._amount
         )
 
+    def __repr__(self):
+        return "Money(%s, %s)" % (self._amount, self._currency)
+
     @staticmethod
     def dollar(amount):
         return Dollar(amount, 'USD')
