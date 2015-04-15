@@ -18,8 +18,6 @@ class CurrencyTest(TestCase):
     def testEquality(self):
         self.assertEqual(Money.dollar(5), Money.dollar(5))
         self.assertNotEqual(Money.dollar(5), Money.dollar(6))
-        self.assertEqual(Money.franc(5), Money.franc(5))
-        self.assertNotEqual(Money.franc(5), Money.franc(6))
         self.assertNotEqual(Money.franc(5), Money.dollar(5))
 
     def testCurrency(self):
