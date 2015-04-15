@@ -7,7 +7,7 @@ class Money():
 
     def __eq__(self, other):
         return (
-            type(self) == type(other) and
+            self.currency() == other.currency() and
             self._amount == other._amount
         )
 
