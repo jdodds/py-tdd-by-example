@@ -14,11 +14,11 @@ class Money():
 
     @staticmethod
     def dollar(amount):
-        return Dollar(amount, 'USD')
+        return Money(amount, 'USD')
 
     @staticmethod
     def franc(amount):
-        return Franc(amount, 'CHF')
+        return Money(amount, 'CHF')
 
     def times(self, multiplier):
         return Money(self._amount * multiplier, self._currency)
