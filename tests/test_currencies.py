@@ -26,6 +26,9 @@ class CurrencyTest(TestCase):
         self.assertEqual("USD", Money.dollar(1).currency())
         self.assertEqual("CHF", Money.franc(1).currency())
 
+    def testDifferentClassEquality(self):
+        self.assertEqual(Money(10, 'CHF'), Franc(10, 'CHF'))
+
 
 if __name__ == '__main__':
     unittest.main()
