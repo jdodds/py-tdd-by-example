@@ -1,6 +1,6 @@
-from abc import ABCMeta, abstractmethod
+from abc import abstractmethod
 
-class Money(metaclass=ABCMeta):
+class Money():
     def __init__(self, amount, currency):
         self._amount = amount
         self._currency = currency
