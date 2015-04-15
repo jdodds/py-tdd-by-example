@@ -1,5 +1,3 @@
-from abc import abstractmethod
-
 class Money():
     def __init__(self, amount, currency):
         self._amount = amount
@@ -22,9 +20,8 @@ class Money():
     def franc(amount):
         return Franc(amount, 'CHF')
 
-    @abstractmethod
     def times(self, multiplier):
-        pass
+        return Money(self._amount * multiplier, self._currency)
 
     def currency(self):
         return self._currency
