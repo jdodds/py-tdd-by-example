@@ -2,7 +2,7 @@
 
 from unittest import TestCase
 
-from money.currencies import Money, Dollar, Franc
+from money.currencies import Money, Franc
 
 class CurrencyTest(TestCase):
     def testMultiplication(self):

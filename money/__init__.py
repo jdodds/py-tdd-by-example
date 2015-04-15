@@ -1,1 +1,1 @@
-from .currencies import Dollar, Franc
+from .currencies import Franc
