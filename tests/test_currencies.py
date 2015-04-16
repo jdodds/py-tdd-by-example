@@ -31,8 +31,15 @@ class CurrencyTest(TestCase):
     def testPlusReturnsTotal(self):
         five = Money.dollar(5)
         total = five.plus(five)
-        self.assertEquals(five, total.augend)
-        self.assertEquals(five, total.addend)
+        self.assertEqual(five, total.augend)
+        self.assertEqual(five, total.addend)
+
+    def testReduceTotal(self):
+        total = Total(Money.dollar(3), Money.dollar(4))
+        bank = Bank()
+        result = bank.reduce(total, 'USD')
+        self.assertEqual(Money.dollar(7), result)
+
 
 if __name__ == '__main__':
     unittest.main()
