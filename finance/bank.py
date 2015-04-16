@@ -1,5 +1,7 @@
 from .money import Money
+from .total import Total
 
 class Bank():
     def reduce(self, source, to):
-        return Money.dollar(10)
+        amount = source.augend.amount + source.addend.amount
+        return Money(amount, to)
