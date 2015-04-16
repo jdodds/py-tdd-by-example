@@ -29,10 +29,11 @@ class Money():
     def plus(self, addend):
         return Total(self, addend)
 
+    def reduce(self, to):
+        return self
+
 class Bank():
     def reduce(self, source, to):
-        if isinstance(source, Money):
-            return source
         return source.reduce(to)
 
 class Total():
