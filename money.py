@@ -25,3 +25,6 @@ class Money():
 
     def currency(self):
         return self._currency
+
+    def plus(self, addend):
+        return Money(self._amount + addend._amount, self._currency)
