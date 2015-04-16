@@ -2,7 +2,7 @@
 
 from unittest import TestCase
 
-from finance.money import Money, Total, Bank
+from finance import Money, Total, Bank
 
 
 class CurrencyTest(TestCase):
