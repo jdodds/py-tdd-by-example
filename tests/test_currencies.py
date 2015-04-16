@@ -4,6 +4,7 @@ from unittest import TestCase
 
 from finance.money import Money
 from finance.bank import Bank
+from finance.total import Total
 
 class CurrencyTest(TestCase):
     def testMultiplication(self):
@@ -26,6 +27,13 @@ class CurrencyTest(TestCase):
         bank = Bank()
         reduced = bank.reduce(total, 'USD')
         self.assertEqual(Money.dollar(10), reduced)
+
+    def testPlusReturnsTotal(self):
+        five = Money.dollar(5)
+        result = five.plus(5)
+        total = Total(result)
+        self.assertEquals(five, total.augend)
+        self.assertEquals(five, total.addend)
 
 if __name__ == '__main__':
     unittest.main()
