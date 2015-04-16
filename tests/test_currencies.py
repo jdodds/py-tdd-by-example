@@ -30,7 +30,7 @@ class CurrencyTest(TestCase):
 
     def testPlusReturnsTotal(self):
         five = Money.dollar(5)
-        total = five.plus(5)
+        total = five.plus(five)
         self.assertEquals(five, total.augend)
         self.assertEquals(five, total.addend)
 
