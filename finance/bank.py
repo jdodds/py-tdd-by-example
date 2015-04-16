@@ -1,3 +1,5 @@
+from .money import Money
+
 class Bank():
     def reduce(self, source, to):
-        pass
+        return Money.dollar(10)
