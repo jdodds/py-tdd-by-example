@@ -2,9 +2,8 @@
 
 from unittest import TestCase
 
-from finance.money import Money
-from finance.bank import Bank
-from finance.total import Total
+from finance.money import Money, Total, Bank
+
 
 class CurrencyTest(TestCase):
     def testMultiplication(self):

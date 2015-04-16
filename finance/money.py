@@ -1,5 +1,3 @@
-from .total import Total
-
 class Money():
     def __init__(self, amount, currency):
         self.amount = amount
@@ -30,3 +28,13 @@ class Money():
 
     def plus(self, addend):
         return Total(self, addend)
+
+class Bank():
+    def reduce(self, source, to):
+        amount = source.augend.amount + source.addend.amount
+        return Money(amount, to)
+
+class Total():
+    def __init__(self, augend, addend):
+        self.augend = augend
+        self.addend = addend
