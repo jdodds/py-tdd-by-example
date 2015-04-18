@@ -29,7 +29,7 @@ class Money():
     def plus(self, addend):
         return Total(self, addend)
 
-    def reduce(self, to):
+    def reduce(self, bank, to):
         if self._currency == 'chf' and to == 'USD':
             rate = 2
         else:
@@ -45,6 +45,6 @@ class Total():
         self.augend = augend
         self.addend = addend
 
-    def reduce(self, to):
+    def reduce(self, bank, to):
         amount = self.augend.amount + self.addend.amount
         return Money(amount, to)
