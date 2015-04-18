@@ -14,6 +14,9 @@ class WasRun(TestCase):
     def testMethod(self):
         self.wasRun = 1
 
+    def setUp(self):
+        self.wasSetUp = 1
+
 class TestCaseTest(TestCase):
     def testRunning(self):
         test = WasRun("testMethod")
