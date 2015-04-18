@@ -5,6 +5,9 @@ class WasRun:
     def testMethod(self):
         self.wasRun = 1
 
+    def run(self):
+        self.testMethod()
+
 test = WasRun("testMethod")
 print(test.wasRun)
 test.run()
