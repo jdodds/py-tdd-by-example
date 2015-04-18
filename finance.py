@@ -40,6 +40,11 @@ class Bank():
     def reduce(self, source, to):
         return source.reduce(self, to)
 
+    def rate(source, to):
+        if source == 'CHF' and to == 'USD':
+            return 2
+        return 1
+
 class Total():
     def __init__(self, augend, addend):
         self.augend = augend
