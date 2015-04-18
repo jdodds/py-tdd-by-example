@@ -48,11 +48,14 @@ class Bank():
         def __hash__(self):
             return 0
 
+    def __init__(self):
+        self._rates = {}
+
     def reduce(self, source, to):
         return source.reduce(self, to)
 
     def addRate(self, source, to, rate):
-        pass
+        self._rates[Pair(source, to)] = rate
 
     def rate(self, source, to):
         if source == 'CHF' and to == 'USD':
