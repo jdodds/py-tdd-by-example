@@ -37,7 +37,10 @@ class Bank():
     def reduce(self, source, to):
         return source.reduce(self, to)
 
-    def rate(source, to):
+    def addRate(self, source, to, rate):
+        pass
+
+    def rate(self, source, to):
         if source == 'CHF' and to == 'USD':
             return 2
         return 1
