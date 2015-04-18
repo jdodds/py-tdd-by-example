@@ -38,7 +38,7 @@ class Money():
 
 class Bank():
     def reduce(self, source, to):
-        return source.reduce(to)
+        return source.reduce(self, to)
 
 class Total():
     def __init__(self, augend, addend):
