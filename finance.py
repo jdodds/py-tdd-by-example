@@ -38,6 +38,16 @@ class Bank():
         def __init__(self, source, to):
             self._source = source
             self._to = to
+
+        def __eq__(self, other):
+            return (
+                self._source == other._source and
+                self._to == other._to
+            )
+
+        def __hash__(self):
+            return 0
+
     def reduce(self, source, to):
         return source.reduce(self, to)
 
