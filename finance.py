@@ -59,9 +59,7 @@ class Bank():
         self._rates[Pair(source, to)] = rate
 
     def rate(self, source, to):
-        if source == 'CHF' and to == 'USD':
-            return 2
-        return 1
+        return self._rates[Pair(source, to)]
 
 class Total():
     def __init__(self, augend, addend):
