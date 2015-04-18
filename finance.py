@@ -59,6 +59,8 @@ class Bank():
         self._rates[Pair(source, to)] = rate
 
     def rate(self, source, to):
+        if source == to:
+            return 1
         return self._rates[Pair(source, to)]
 
 class Total():
