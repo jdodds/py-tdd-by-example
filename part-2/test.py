@@ -19,6 +19,7 @@ class WasRun(TestCase):
         self.wasRun = 1
 
     def setUp(self):
+        self.wasRun = None
         self.wasSetUp = 1
 
 class TestCaseTest(TestCase):
