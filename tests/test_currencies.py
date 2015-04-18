@@ -17,8 +17,8 @@ class CurrencyTest(TestCase):
         self.assertNotEqual(Money.franc(5), Money.dollar(5))
 
     def testCurrency(self):
-        self.assertEqual("USD", Money.dollar(1).currency())
-        self.assertEqual("CHF", Money.franc(1).currency())
+        self.assertEqual("USD", Money.dollar(1).currency)
+        self.assertEqual("CHF", Money.franc(1).currency)
 
     def testSimpleAddition(self):
         five = Money.dollar(5)

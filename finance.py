@@ -5,7 +5,7 @@ class Money():
 
     def __eq__(self, other):
         return (
-            self.currency() == other.currency() and
+            self.currency == other.currency and
             self.amount == other.amount
         )
 
@@ -23,6 +23,7 @@ class Money():
     def times(self, multiplier):
         return Money(self.amount * multiplier, self._currency)
 
+    @property
     def currency(self):
         return self._currency
 
