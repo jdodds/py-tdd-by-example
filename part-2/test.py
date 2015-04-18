@@ -36,6 +36,9 @@ class WasRun(TestCase):
         self.wasRun = 1
         self.log = self.log + "testMethod "
 
+    def testBrokenMethod(self):
+        raise Exception
+
     def setUp(self):
         self.wasRun = None
         self.log = "setUp "
@@ -61,3 +64,4 @@ class TestCaseTest(TestCase):
 
 TestCaseTest("testTemplateMethod").run()
 TestCaseTest("testResult").run()
+TestCaseTest("testFailedResult").run()
