@@ -75,3 +75,9 @@ class Total():
 
     def plus(self, addend):
         return Total(self, addend)
+
+    def times(self, multiplier):
+        return Total(
+            self.augend.times(multiplier),
+            self.addend.times(multiplier)
+        )
