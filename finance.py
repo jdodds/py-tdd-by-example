@@ -34,6 +34,10 @@ class Money():
         return Money(self.amount / rate, to)
 
 class Bank():
+    class Pair():
+        def __init__(self, source, to):
+            self._source = source
+            self._to = to
     def reduce(self, source, to):
         return source.reduce(self, to)
 
