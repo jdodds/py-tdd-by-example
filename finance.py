@@ -33,20 +33,21 @@ class Money():
         rate = bank.rate(self._currency, to)
         return Money(self.amount / rate, to)
 
+class Pair():
+    def __init__(self, source, to):
+        self._source = source
+        self._to = to
+
+    def __eq__(self, other):
+        return (
+            self._source == other._source and
+            self._to == other._to
+        )
+
+    def __hash__(self):
+        return 0
+
 class Bank():
-    class Pair():
-        def __init__(self, source, to):
-            self._source = source
-            self._to = to
-
-        def __eq__(self, other):
-            return (
-                self._source == other._source and
-                self._to == other._to
-            )
-
-        def __hash__(self):
-            return 0
 
     def __init__(self):
         self._rates = {}
